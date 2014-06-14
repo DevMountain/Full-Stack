@@ -49,7 +49,7 @@ var myFriends = require('./server-assets/pathToFriends');
 
 myFriends.getFriends(); //returns our array of friends
 
-myFriends.setFriends('Ben'); //adds Ben to our friends array
+myFriends.addFriends('Ben'); //adds Ben to our friends array
 ```
 
 * Add a file to your server-assets called myData.js
