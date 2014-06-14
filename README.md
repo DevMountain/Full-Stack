@@ -25,9 +25,9 @@ server.js
 
 Really note how that file structure is set up. We have a 'public' folder that holds our Angular or Front end app. We also have a server-assets folder that is going to hold anything that is a 'helper' to our server. Then we have our normal server.js file which will be where our API lives.
 
-Go ahead and set up your file structure in the way above but leave the server-assets page blank.
+Go ahead and set up your file structure in the way above but leave the server-assets folder blank.
 
-##Step 2: Setup our API
+##Step 2: Setup our 'Server-Assets'
 By now you should have notice that Node uses a pretty cool module system for requiring files. Meaning, whenever you use code that looks like this 'var http = require('http')', node is going out and getting the http module and making it available to you. Well, we don't have to always rely on getting other peoples modules, we can also create our own and then require our own modules. This is a really powerful idea and allows our code to stay very modular and organized. 
 
 If you remember using an Angular service, the only data that was available in our controller was the data we put on 'this'. It's the same idea with node. The only data that will be available when we require something is the data that we stick on 'module.exports'. This makes it really easy to have 'getter' and 'setter' methods to get and set our 'private' data. Here's an example. 
@@ -61,3 +61,18 @@ myFriends.setFriends('Ben'); //adds Ben to our friends array
 
 Now that we have our data...
 * Now make getter and setter methods to be able to access each piece of Data in your file and be sure to put these getter and setter methods on 'module.exports' in order to be able to access them later in server.js once you require this file. 
+
+
+##Step 3: Setup our API
+Now that we have our server assets finished, let's go ahead and create our express API.
+* Just like last time create a very simple express server and test that it's working by sending back 'Hello World' whenever someone hits the index (/) of your app.
+* Now, just like you can require other modules (http, express, body-parser), go ahead and require the server-assets module that is holding all your data. You do this by 'var myData = require('./server-assets/pathToFile');
+* Now, note that you're able to access all of the methods that you put on 'module.exports' to get your data.
+* Now, create an API that allows you to GET and POST *ALL the data from your server-assets data page. An example is below.
+```javascript
+app.get('/friends', function(req, res){
+  var myFriends = myData.getFriends();
+  res.send({friends: myFriends});
+});
+```
+* Check that your API is working using regular GET requests and POST requestse with PostMan.
