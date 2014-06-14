@@ -72,7 +72,7 @@ Now that we have our server assets finished, let's go ahead and create our expre
 ```javascript
 app.get('/friends', function(req, res){
   var myFriends = myData.getFriends();
-  res.send({friends: myFriends});
+  res.send(myFriends);
 });
 ```
 * Check that your API is working using regular GET requests and POST requestse with PostMan.
