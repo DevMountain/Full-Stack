@@ -76,3 +76,16 @@ app.get('/friends', function(req, res){
 });
 ```
 * Check that your API is working using regular GET requests and POST requestse with PostMan.
+
+##Step 4: Create the Front End
+Now that our API is complete, let's set up the front end to be able to display our data, in a beautiful way.
+* Without using Yeoman, set up your 'public' folder to include all the files that are in the example file structure above. Remember to include each file in your index.html page or they won't work. 
+* Test that your app is working by adding $scope.test = 'Soccer is Boring'; to your controller and then <p>{{test}}</p> to your index.html page, if everything is working move on, if not, check the console.
+* In your index.html, create 4 buttons with each one retrieving and displaying different data from your API. ie. One button called 'Get Friends' that when you click it will run a function in your controller that gets your friends.
+* Now that you have all your 'Getter' buttons set up, create 3 more buttons with corresponding input boxes that will accept input, then when the button is clicked it will run a function in your controller that will post the data that was in the input box to your API's POST method. Basically all your doing is allowing the front end to now post new data into your API.
+* Now here's the part where it all fits together. Create an Angular service that, using $http, will go and retrieve your data you set up in your API. To wrap your head around this, just remember that all your API is saying is that when someone makes a get/post request to a certain URL, give that person back the data. So now on the front end, just make a get/post request to a certain url. ie. '$http({method: 'GET', url: '/friends'});
+* Now that your index.html is set up and your service is set up, tie in all your functions in your controller to now go and use your service to retrieve your data from the API.
+* 
+
+
+<h4> This readme is intentionally very vague. Often times you'll have to work with documentation that is less than superior. Really try to see the bigger picture of what's going on in order to complete this assignment. </h4>
