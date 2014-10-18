@@ -4,7 +4,7 @@ full-stack
 Now that you've created Applications with Angular and API's with Node and Express, let's combine them. The goal of this activity is to help you understand the 'big picture'. You're going to build an API using Node/Express, then we're going to build the interface (using Angular) that allows you to access your API. 
 
 ##Step 1: Setup your folder structure. 
-* I don't want you to become too reliant on Yeoman. Everything we do today will be from scratch. 
+* Everything we do today will be from scratch. 
 * The important thing to understand is that now we're going to have both client side and server side code in the same directory. A common way to set up your folder structure for that is like this...
 
 ```
