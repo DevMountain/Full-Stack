@@ -80,7 +80,7 @@ app.get('/friends', function(req, res){
 
 ##Step 4: Create the Front End
 Now that our API is complete, let's set up the front end to be able to display our data, in a beautiful way.
-* Without using Yeoman, set up your 'public' folder to include all the files that are in the example file structure above (besides user.js and login.js). Remember to include each file in your index.html page or they won't work. 
+* Set up your 'public' folder to include all the files that are in the example file structure above (besides user.js and login.js). Remember to include each file in your index.html page or they won't work. 
 * Test that your app is working by adding $scope.test = 'CSS IS AWESOME'; to your controller and then <p>{{test}}</p> to your index.html page, if everything is working move on, if not, check the console.
 * In your index.html, create 4 buttons with each one retrieving and displaying different data from your API. ie. One button called 'Get Friends' that when you click it will run a function in your controller that gets your friends.
 * Now that you have all your 'Getter' buttons set up, create 3 more buttons with corresponding input boxes that will accept input, then when the button is clicked it will run a function in your controller that will post the data that was in the input box to your API's POST method. Basically all your doing is allowing the front end to now post new data into your API.
