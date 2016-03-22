@@ -90,3 +90,7 @@ Now that our API is complete, let's set up the front end to be able to display o
 
 
 <h4> This readme is intentionally very vague. Often times you'll have to work with documentation that is less than superior. Really try to see the bigger picture of what's going on in order to complete this assignment. </h4>
+
+## Copyright
+
+© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
